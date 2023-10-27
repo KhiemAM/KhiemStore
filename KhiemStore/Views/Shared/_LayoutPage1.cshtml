@@ -1,0 +1,153 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link href="~/CSS/custom_bootstrap.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="~/CSS/StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid box-2">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+                <div class="container">
+                    <a class="navbar-brand" href="#"><i class="fa-solid fa-shop me-2"></i> <strong>KAM SHOP</strong></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="mx-auto my-3 d-lg-none d-sm-block d-xs-block">
+                        <div class="input-group">
+                            <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="form-control border-warning" style="color:#7a7a7a">
+                            <button class="btn btn-warning text-white">Search</button>
+                        </div>
+                    </div>
+                    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="ms-auto d-none d-lg-block">
+                            <div class="input-group">
+                                <span class="border-warning input-group-text bg-warning text-white"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="text" class="form-control border-warning" style="color:#7a7a7a">
+                                <button class="btn btn-warning text-white">Search</button>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                @Html.ActionLink("Store", "AllProduct", new {Controller = "Collection" }, new { @class = "nav-link mx-2 text-uppercase active"})
+                                @*<a class="nav-link mx-2 text-uppercase active" aria-current="page" href="/Collection/All">Store</a>*@
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                @Html.ActionLink("Laptop", "Laptop", new { categoryid = 1 ,Controller = "Collection" }, new { @class = "nav-link dropdown-toggle" })
+                                @*<a class="nav-link dropdown-toggle" href="/Collection/Laptop?categoryid=1" id="navbardrop">
+                                    Laptop
+                                </a>*@
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=1&categoryid=1">ACER</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=2&categoryid=1">ASUS</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=3&categoryid=1">MSI</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=4&categoryid=1">LENOVO</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=5&categoryid=1">DELL</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=6&categoryid=1">GIGABYTE</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=7&categoryid=1">HP</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                <a class="nav-link dropdown-toggle" href="/Collection/Laptop?categoryid=2" id="navbardrop">
+                                    PC
+                                </a>
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=8&categoryid=2">GVN TITAN</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=9&categoryid=2">GVN PHANTOM</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=10&categoryid=2">GVN VIPER</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=11&categoryid=2">GVN MINION</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                <a class="nav-link dropdown-toggle" href="/Collection/Laptop?categoryid=3" id="navbardrop" >
+                                    Màn hình
+                                </a>
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=12&categoryid=3">LG</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=13&categoryid=3">Asus</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=14&categoryid=3">ViewSonic</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=15&categoryid=3">Dell</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=16&categoryid=3">Gigabyte</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=17&categoryid=3">Acer</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=18&categoryid=3">MSI</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=19&categoryid=3">Lenovo</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=20&categoryid=3">Samsung</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=21&categoryid=3">LC-Power</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                <a class="nav-link dropdown-toggle" href="/Collection/Laptop?categoryid=4" id="navbardrop">
+                                    Bàn phím
+                                </a>
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=22&categoryid=4">Akko</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=23&categoryid=4">Logitech</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=24&categoryid=4">Asus</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=25&categoryid=4">Razer</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=26&categoryid=4">Corsair</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=27&categoryid=4">Vortex</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=28&categoryid=4">Mikit</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown dmenu">
+                                <a class="nav-link dropdown-toggle" href="/Collection/Laptop?categoryid=5" id="navbardrop" >
+                                    Chuột
+                                </a>
+                                <div class="dropdown-menu sm-menu">
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=29&categoryid=5">Logitech</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=30&categoryid=5">Razer</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=31&categoryid=5">Asus</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=32&categoryid=5">Corsair</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=33&categoryid=5">Steelseries</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=34&categoryid=5">HyperX</a>
+                                    <a class="dropdown-item" href="/Collection/BrandLaptop?brandid=35&categoryid=5">Zowie</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto ">
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-circle-user me-1"></i> Account</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="box-1">
+        @RenderBody()
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.navbar-light .dmenu').hover(function () {
+                $(this).find('.sm-menu').first().stop(true, true).slideDown(150);
+            }, function () {
+                $(this).find('.sm-menu').first().stop(true, true).slideUp(105)
+            });
+        });
+
+
+        
+    </script>
+</body>
+</html>
